@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">  
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/cabecalho.css">
+    <link rel="stylesheet" href="css/main.css">
+    <title>Ladra Arcana</title>
+</head>
+
+<body>
+    <header class="cabecalho">
+        <div class="div__logo">
+            <a href="#" class="logo">
+                <img src="img/luxgif.gif" alt="Logo Lux" class="img__logo">
+            </a>  
+        </div>
+        <nav id="cabecalho__nav">
+            <button id="btn__mobile" aria-controls="cabecalho__menu"
+            aria-expanded="false" aria-haspopup="true" aria-label="Abrir Menu">Menu
+                <span class="hamburguer"></span>
+            </button>
+            <ul class="cabecalho__menu" role="menu">
+                <li>
+                    <a href="https://leagueoflegends.fandom.com/pt-br/wiki/Lux">
+                        <img src="img/icon__hab.png" alt="Ícone Habilidades" class="cabecalho__icone">
+                        <p>Habilidades</p>  
+                    </a>
+                </li>
+                <li>
+                    <a href="https://universe.leagueoflegends.com/pt_BR/story/champion/lux/">
+                        <img src="img/icon__papiro.png" alt="Ícone Lore" class="cabecalho__icone">
+                    <p>Lore</p>
+                </a>
+                </li>
+                <li>
+                    <a href="https://www.youtube.com/watch?v=tRlqYeDXJt0&ab_channel=Mako">
+                        <img src="img/icon__play.png" alt="Ícone Plays" class="cabecalho__icone">
+                        <p>Plays</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="img/icon__login.png" alt="Ícone Habilidades" class="cabecalho__icone">
+                        <p>Login</p>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="blur">        
+        <section class="secao__titulo">
+            <h1 class="titulo">A Ladra Arcana</h1>
+            <img src="img/brilhinho-mobile.png" alt="Divisória do texto" class="brilhinho__mobile">
+            <img src="img/brilhinho-desktop.png" alt="Divisória do texto" class="brilhinho__desktop">
+        </section>
+        <section class="container__textos">
+            <p class="txt__inscreva-mobile">Inscreva-se para acompanhar</p>
+            <p class="txt__inscreva-desktop">Inscreva-se para receber as melhores dicas 
+            para dominar a mid lane com a fadinha mais forte do game</p>
+            
+            <div class="inscrevase">
+                <input type="text" placeholder="Nome Completo" id="inputName" onfocus="this.value='';">
+                <input type="email" placeholder="seuemail@gmail.com" id="inputEmail" onfocus="this.value='';">
+                <button class="btn" onclick="inscreveu()" id="btnInscreveu">Inscreva-se ></button>
+            </div>      
+            <div class="redes__sociais">
+                <a href="#"><img src="img/icon-fb.png" alt="Logotipo do Facebook"></a>
+                <a href="#"><img src="img/icon-ig.png" alt="Logotipo do Instagram"></a>
+                <a href="#"><img src="img/icon-tt.png" alt="Logotipo do Twitter"></a>
+            </div>
+            <div class="citacao">
+                <p class="citacao__aspas">“</p>
+                <p class="citacao__trecho">Eu tenho escondido minha luz por tempo demais.</p>
+                <p class="citacao__aspas">”</p>
+            </div>
+            <p class="citacao__autora">Luxanna Stemmguarda</p>
+        </section>      
+    </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+:root {
+    --roxo: #6242e4;
+    --amarelo: #f2db48;
+    --quase-branco: #fdf7ff;
+    --quase-preto: #1e1926;
+    --fonte-geral: 'Raleway', sans-serif;
+}
+
+body {
+    background-image: url(../img/bg-mobile.png);
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: 100vh;
+    color: var(--quase-branco);
+}
+
+
+/* Tablet/Pc */
+
+@media (min-width: 601px) {
+    body {
+        background-image: url(../img/bg-desktop.png);
+        background-size: cover;
+    }
+}
+
+.btn {
+    width: 235px;
+    height: 35px;
+    margin-top: .6rem;
+    font-size: 1.2rem;
+    font-weight: 700;
+
+    cursor: pointer;
+    border: none;
+    border-radius: 20px;
+
+    background-color:var(--amarelo);
+    color: var(--quase-preto);
+
+    box-shadow: 2px 2px 0px var(--quase-branco);
+    transition: transform 150ms;
+}
+
+.btn:hover {
+    transform: scale(1.05);
+}
+
+.btn:active {
+    transform: translate(3px, 3px);
+}

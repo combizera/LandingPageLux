@@ -1,0 +1,168 @@
+.cabecalho {
+    color: var(--quase-branco);
+    background: var(--amarelo);
+    font-family: var(--fonte-geral);
+    
+    height: 50px;
+    padding: .8rem;
+
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;  
+}
+
+.img__logo {
+    max-width: 82px;
+    max-width: 82px;
+}
+
+.cabecalho__menu {
+    display: flex;
+    gap: .5rem;
+}
+
+.cabecalho__menu a {
+    display: block;
+    padding: .5rem;
+}
+
+#btn__mobile{
+    display: none;
+}
+
+
+/*Tablet/PC*/
+
+@media (min-width: 601px) {    
+    .div__logo{
+        visibility: visible;
+        position: absolute;
+        margin-right: 90%;
+    }
+    
+    .cabecalho{
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+    }
+
+    .cabecalho__icone {
+        max-width: 25px;
+        max-height: 25px;
+        
+    }
+
+    .cabecalho__menu a {
+        display: flex;
+        align-items: center;
+    }
+
+    .cabecalho__menu a:hover {
+        color: var(--roxo);
+        font-size: 1.1rem;
+        font-weight: 500;
+        transition: .2s;
+    }
+
+    .cabecalho__menu p {
+        margin-left: 10px;
+    }
+}
+
+
+/* Celulares */
+
+@media (max-width: 600px) {
+    .logo {
+        display: none;
+    }
+
+    .cabecalho {
+        color: var(--quase-preto);
+        font-weight: 700;
+    }
+    
+    #btn_mobile {
+        display: block;
+    }
+
+    .cabecalho__menu {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        position: absolute;
+
+        width: 25%;
+        top: 50px;
+        right: 0px;
+        background-color: rgba( 242, 219, 72, 1);
+        height: 0px;
+        transition: .6s;
+        z-index: 1000;
+
+        visibility: hidden;
+        overflow-y: hidden;
+        align-items: center;
+    }
+
+    #cabecalho__nav.active .cabecalho__menu {
+        visibility: visible;
+        height: calc(46vh - 50px);
+        overflow-y: auto;
+    }
+
+    .cabecalho__menu a {
+        padding: 1rem 0;
+        margin: 0 1rem;
+        border-bottom: 2px solid rgba(0, 0, 0, .5);
+        font-weight: 700;
+    }
+
+    #btn__mobile {
+        padding: .5rem 1rem;
+        display: flex;
+        border: none;
+        background: none;
+        cursor: pointer;
+    }
+    
+    .hamburguer {
+        display: block;
+        border-top: 2px solid;
+        width: 20px;
+        margin-left: 5px;
+    }
+
+    .hamburguer::after, .hamburguer::before {
+        content: '';
+        display: block;
+        width: 20px;
+        height: 2px;
+        background: currentColor;
+        margin-top: 5px;
+        transition: .3s;
+        position: relative;
+    }
+
+    #cabecalho__nav.active .hamburguer {
+        border-top-color: transparent;
+    }
+
+    #cabecalho__nav.active .hamburguer::after {
+        transform: rotate(-135deg);
+        top: -7px;
+    }
+
+    #cabecalho__nav.active .hamburguer::before {
+        transform: rotate(135deg);
+    }
+
+    .cabecalho__icone {
+        display: none;
+    }
+
+    .blur {
+        backdrop-filter: blur(0px);
+    }
+}
